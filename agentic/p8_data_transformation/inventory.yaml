@@ -1,0 +1,59 @@
+# Inventory levels as of 2024-01-14
+# Updated daily at midnight
+
+inventory:
+  P001:
+    quantity: 50
+    warehouse: A
+    reorder_point: 20
+    last_restocked: 2024-01-10
+
+  P002:
+    quantity: 200
+    warehouse: A
+    reorder_point: 50
+    last_restocked: 2024-01-12
+
+  P003:
+    quantity: 15
+    warehouse: B
+    reorder_point: 10
+    last_restocked: 2024-01-08
+
+  P004:
+    quantity: 8
+    warehouse: B
+    reorder_point: 15
+    last_restocked: 2024-01-05
+    notes: "Low stock - reorder pending"
+
+  P005:
+    quantity: 3
+    warehouse: A
+    reorder_point: 10
+    last_restocked: 2024-01-01
+    notes: "Critical - expedite reorder"
+
+  P006:
+    quantity: 25
+    warehouse: C
+    reorder_point: 10
+    last_restocked: 2024-01-13
+
+  P007:
+    quantity: 0
+    warehouse: C
+    reorder_point: 20
+    last_restocked: 2023-12-15
+    notes: "Out of stock - awaiting shipment"
+
+warehouses:
+  A:
+    location: "New York"
+    capacity: 1000
+  B:
+    location: "Los Angeles"
+    capacity: 800
+  C:
+    location: "Chicago"
+    capacity: 600

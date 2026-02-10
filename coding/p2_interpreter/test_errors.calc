@@ -1,0 +1,19 @@
+# Error case tests - each should produce appropriate error
+# Run each section separately
+
+# Test 1: Undefined variable
+print undefined_var
+
+# Test 2: Undefined function
+print notAFunction(5)
+
+# Test 3: Division by zero
+let x = 10
+print x / 0
+
+# Test 4: Syntax error
+let y = = 5
+
+# Test 5: Wrong argument count
+fn add(a, b) = a + b
+print add(1)

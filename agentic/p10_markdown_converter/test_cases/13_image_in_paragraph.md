@@ -1,0 +1,1 @@
+Here is an image: ![cat](cat.jpg) in text.

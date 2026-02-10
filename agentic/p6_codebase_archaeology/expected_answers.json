@@ -1,0 +1,104 @@
+{
+  "dependency_graph": {
+    "main.py": ["config.settings", "core.engine", "core.processor", "services.api", "services.database", "models.user", "utils.validation"],
+    "core/engine.py": ["core.utils", "core.processor"],
+    "core/processor.py": ["core.engine", "core.utils"],
+    "core/utils.py": [],
+    "config/settings.py": ["config.local_settings"],
+    "models/user.py": [],
+    "models/helpers.py": ["models.user"],
+    "services/api.py": [],
+    "services/database.py": []
+  },
+  "circular_imports": [
+    ["core/engine.py", "core/processor.py"]
+  ],
+  "dead_code": {
+    "files": ["services/cache.py", "utils/formatting.py", "legacy/old_processor.py", "legacy/deprecated.py"],
+    "functions": [
+      "__init__.py:unused_init_function",
+      "__init__.py:UnusedClass",
+      "main.py:unused_main_helper",
+      "main.py:another_dead_function",
+      "core/engine.py:unused_engine_helper",
+      "core/engine.py:DeprecatedEngine",
+      "core/processor.py:ProcessingStrategy",
+      "core/processor.py:FastStrategy",
+      "core/processor.py:AccurateStrategy",
+      "core/processor.py:get_strategy",
+      "core/utils.py:deprecated_transform",
+      "core/utils.py:unused_helper",
+      "core/utils.py:TransformationPipeline",
+      "config/settings.py:validate_database_config",
+      "config/settings.py:validate_api_config",
+      "models/user.py:AdminUser",
+      "models/user.py:GuestUser",
+      "models/user.py:create_test_user",
+      "models/data.py:DataCollection",
+      "models/data.py:serialize_data",
+      "models/data.py:deserialize_data",
+      "models/helpers.py:validate_user_data",
+      "models/helpers.py:merge_user_data",
+      "services/api.py:MockAPIClient",
+      "services/api.py:create_test_client",
+      "services/api.py:get_endpoint",
+      "services/database.py:ConnectionPool",
+      "services/database.py:get_pool",
+      "services/database.py:execute_query",
+      "utils/common.py:unflatten_dict",
+      "utils/common.py:deep_copy",
+      "utils/common.py:Singleton",
+      "utils/validation.py:validate_username",
+      "utils/validation.py:validate_password",
+      "utils/validation.py:SchemaValidator"
+    ]
+  },
+  "duplicated_functions": [
+    {
+      "name": "format_output",
+      "locations": ["core/engine.py", "utils/common.py"],
+      "difference": "indent=2 vs indent=4 in json.dumps"
+    },
+    {
+      "name": "parse_response",
+      "locations": ["core/processor.py", "services/api.py"],
+      "difference": "Returns None vs returns {} for missing 'data' key"
+    },
+    {
+      "name": "is_valid_email",
+      "locations": ["core/utils.py", "utils/validation.py"],
+      "difference": "Simple regex vs more complete regex pattern"
+    }
+  ],
+  "configuration_sources": [
+    {"source": "DEFAULTS (hardcoded)", "file": "config/settings.py", "priority": 5},
+    {"source": "defaults.yaml", "file": "config/defaults.yaml", "priority": 4},
+    {"source": "config.json", "file": "config.json", "priority": 3},
+    {"source": "local_settings.py", "file": "config/local_settings.py", "priority": 2},
+    {"source": "environment variables", "file": "N/A", "priority": 1},
+    {"source": "config.ini", "file": "config.ini", "priority": "NOT LOADED (dead)"}
+  ],
+  "bugs": [
+    {
+      "id": 1,
+      "file": "config/settings.py",
+      "function": "deep_merge",
+      "description": "Mutates base dict instead of copying",
+      "line": "result = base  # Should be base.copy()"
+    },
+    {
+      "id": 2,
+      "file": "config/settings.py",
+      "function": "load_config",
+      "description": "Merge order is backwards - lower priority overrides higher priority",
+      "impact": "DEFAULTS always win over environment variables"
+    },
+    {
+      "id": 3,
+      "file": "core/processor.py vs services/api.py",
+      "function": "parse_response",
+      "description": "Inconsistent return value for missing data - one returns None, other returns {}",
+      "impact": "Can cause NoneType errors or silent failures depending on which version is called"
+    }
+  ]
+}

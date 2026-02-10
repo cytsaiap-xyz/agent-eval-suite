@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orders>
+    <order id="ORD001" user_id="U001" date="2024-01-15">
+        <items>
+            <item product_id="P001" quantity="2"/>
+            <item product_id="P003" quantity="1"/>
+        </items>
+        <notes>Priority shipping requested</notes>
+    </order>
+    <order id="ORD002" user_id="U002" date="2024-01-16">
+        <items>
+            <item product_id="P002" quantity="5"/>
+        </items>
+    </order>
+    <order id="ORD003" user_id="U003" date="2024-01-17">
+        <items>
+            <item product_id="P001" quantity="1"/>
+            <item product_id="P004" quantity="3"/>
+        </items>
+    </order>
+    <order id="ORD004" user_id="U004" date="2024-01-18">
+        <items>
+            <item product_id="P005" quantity="2"/>
+        </items>
+    </order>
+    <order id="ORD005" user_id="U005" date="2024-01-19">
+        <items>
+            <item product_id="P002" quantity="10"/>
+            <item product_id="P003" quantity="2"/>
+        </items>
+    </order>
+    <order id="ORD006" user_id="U006" date="2024-01-20">
+        <items>
+            <item product_id="P006" quantity="1"/>
+        </items>
+    </order>
+    <!-- Malformed order - missing user_id -->
+    <order id="ORD007" date="2024-01-21">
+        <items>
+            <item product_id="P001" quantity="1"/>
+        </items>
+    </order>
+    <order id="ORD008" user_id="U007" date="2024-01-22">
+        <items>
+            <item product_id="P003" quantity="4"/>
+            <item product_id="P004" quantity="2"/>
+        </items>
+    </order>
+    <order id="ORD009" user_id="U008" date="2024-01-23">
+        <items>
+            <item product_id="P007" quantity="1"/>
+        </items>
+    </order>
+    <!-- Order referencing non-existent product -->
+    <order id="ORD010" user_id="U009" date="2024-01-24">
+        <items>
+            <item product_id="P999" quantity="5"/>
+        </items>
+    </order>
+    <order id="ORD011" user_id="U010" date="2024-01-25">
+        <items>
+            <item product_id="P001" quantity="3"/>
+            <item product_id="P002" quantity="2"/>
+        </items>
+    </order>
+    <!-- Order referencing non-existent user -->
+    <order id="ORD012" user_id="U999" date="2024-01-26">
+        <items>
+            <item product_id="P004" quantity="1"/>
+        </items>
+    </order>
+    <order id="ORD013" user_id="U001" date="2024-01-27">
+        <items>
+            <item product_id="P005" quantity="100"/>
+        </items>
+        <notes>Large order - verify stock</notes>
+    </order>
+    <!-- Malformed - negative quantity -->
+    <order id="ORD014" user_id="U002" date="2024-01-28">
+        <items>
+            <item product_id="P001" quantity="-3"/>
+        </items>
+    </order>
+    <order id="ORD015" user_id="U003" date="2024-01-29">
+        <items>
+            <item product_id="P006" quantity="2"/>
+            <item product_id="P007" quantity="1"/>
+        </items>
+    </order>
+</orders>

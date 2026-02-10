@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+coverage_html/
+
+# Results (generated during evaluation)
+results/*.json
+
+# Solutions (submitted by users)
+coding/*/solution.py
+coding/p2_interpreter/interpreter.py
+coding/p3_kanban/kanban.html
+agentic/*/analysis_report.md
+agentic/p7_test_generation/test_scheduler.py
+agentic/p10_markdown_converter/converter.py
+
+# OS
+.DS_Store
+Thumbs.db

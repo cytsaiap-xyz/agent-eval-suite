@@ -1,0 +1,13 @@
+user_id,name,email,tier,signup_date
+U001,Alice Johnson,alice@example.com,gold,2023-01-15
+U002,Bob Smith,bob@example.com,silver,2023-03-22
+U003,Charlie Brown,charlie@example.com,bronze,2023-05-10
+U004,Diana Ross,diana@example.com,gold,2022-11-30
+U005,Eve Wilson,eve@example.com,silver,2023-07-18
+U006,Frank Miller,frank@example.com,bronze,2023-09-05
+U007,Grace Lee,grace@example.com,gold,2022-08-14
+U008,Henry Ford,henry@example.com,silver,2023-02-28
+U009,Ivy Chen,ivy@example.com,bronze,2023-06-12
+U010,Jack Ryan,jack@example.com,gold,2023-04-01
+U011,Kate White,INVALID_EMAIL,silver,2023-08-20
+U012,Leo Black,leo@example.com,platinum,2023-10-15

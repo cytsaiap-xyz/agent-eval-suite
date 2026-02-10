@@ -1,0 +1,2 @@
+- Use `git add`
+- Then `git commit`

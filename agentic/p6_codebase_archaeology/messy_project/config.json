@@ -1,0 +1,19 @@
+{
+    "debug": true,
+    "log_level": "INFO",
+    "database": {
+        "host": "json-db-server",
+        "port": 5432,
+        "name": "json_app_db",
+        "user": "app_user"
+    },
+    "api": {
+        "base_url": "https://api.production.com",
+        "timeout": 45,
+        "api_key": "json-api-key-xyz"
+    },
+    "cache": {
+        "enabled": false,
+        "ttl": 1800
+    }
+}

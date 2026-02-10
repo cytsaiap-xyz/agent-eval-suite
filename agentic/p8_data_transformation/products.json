@@ -1,0 +1,65 @@
+{
+  "products": [
+    {
+      "id": "P001",
+      "name": "Wireless Mouse",
+      "category": "Electronics",
+      "base_price": 29.99,
+      "weight_kg": 0.15
+    },
+    {
+      "id": "P002",
+      "name": "USB-C Cable",
+      "category": "Electronics",
+      "base_price": 12.99,
+      "weight_kg": 0.05
+    },
+    {
+      "id": "P003",
+      "name": "Laptop Stand",
+      "category": "Accessories",
+      "base_price": 49.99,
+      "weight_kg": 1.2
+    },
+    {
+      "id": "P004",
+      "name": "Mechanical Keyboard",
+      "category": "Electronics",
+      "base_price": 89.99,
+      "weight_kg": 0.8
+    },
+    {
+      "id": "P005",
+      "name": "Monitor Light Bar",
+      "category": "Accessories",
+      "base_price": 39.99,
+      "weight_kg": 0.3
+    },
+    {
+      "id": "P006",
+      "name": "Webcam HD",
+      "category": "Electronics",
+      "base_price": 79.99,
+      "weight_kg": 0.2
+    },
+    {
+      "id": "P007",
+      "name": "Desk Mat XL",
+      "category": "Accessories",
+      "base_price": 24.99,
+      "weight_kg": 0.5
+    },
+    {
+      "id": "P008",
+      "name": "Headphone Stand",
+      "category": "Accessories",
+      "base_price": 19.99,
+      "weight_kg": 0.4,
+      "discontinued": true
+    }
+  ],
+  "metadata": {
+    "last_updated": "2024-01-01",
+    "currency": "USD"
+  }
+}

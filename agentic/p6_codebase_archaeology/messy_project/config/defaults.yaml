@@ -1,0 +1,21 @@
+# Default configuration
+# This should be LOWEST priority but bugs may affect this
+
+debug: false
+log_level: WARNING
+
+database:
+  host: yaml-db-host
+  port: 5432
+  name: yaml_database
+  pool_size: 10
+
+api:
+  base_url: http://yaml-api.local
+  timeout: 60
+  retry_count: 3
+
+cache:
+  enabled: true
+  ttl: 7200
+  backend: redis
