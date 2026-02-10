@@ -6,7 +6,7 @@ All tests work **completely offline** - no API calls required.
 ## Overview
 
 - **5 Coding Problems** - Algorithm, web dev, debugging, optimization
-- **5 Agentic Problems** - Multi-step reasoning, iteration, tool usage
+- **10 Agentic Problems** - Multi-step reasoning, iteration, tool usage, document processing
 
 ## Quick Start
 
@@ -43,6 +43,11 @@ python agentic/p6_codebase_archaeology/evaluate_p6.py analysis_report.md
 | 8 | Data Transformation | 12-25 tool calls | Multi-format ETL |
 | 9 | Debug Loop | 15-30 iterations | Iterative debugging |
 | 10 | Markdown Converter | 10-25 iterations | Self-correcting code |
+| 11 | Word Document Analysis | 10-20 tool calls | DOCX parsing, TOC |
+| 12 | PowerPoint Generation | 15-25 tool calls | PPTX creation, charts |
+| 13 | Excel Processing | 15-30 tool calls | XLSX formulas, pivot |
+| 14 | PDF Extraction | 10-20 tool calls | PDF parsing, tables |
+| 15 | Multi-Format Integration | 20-35 tool calls | All formats combined |
 
 ## Directory Structure
 
@@ -66,7 +71,12 @@ agent-eval-suite/
 │   ├── p7_test_generation/
 │   ├── p8_data_transformation/
 │   ├── p9_debug_loop/
-│   └── p10_markdown_converter/
+│   ├── p10_markdown_converter/
+│   ├── p11_docx_analysis/
+│   ├── p12_pptx_generation/
+│   ├── p13_xlsx_processing/
+│   ├── p14_pdf_extraction/
+│   └── p15_multi_format/
 └── results/
     └── (evaluation results go here)
 ```
@@ -107,10 +117,12 @@ Problems are designed to differentiate between models:
 - Standard library only for problems
 - pytest, coverage for test evaluation (p7, p9)
 - flask, flask-sqlalchemy for p9
+- python-docx, python-pptx, openpyxl for p11-p13, p15
+- reportlab, PyMuPDF for p14-p15
 
 Install dependencies:
 ```bash
-pip install pytest pytest-cov flask flask-sqlalchemy pyyaml
+pip install pytest pytest-cov flask flask-sqlalchemy pyyaml python-docx python-pptx openpyxl reportlab PyMuPDF
 ```
 
 ## Offline Guarantee

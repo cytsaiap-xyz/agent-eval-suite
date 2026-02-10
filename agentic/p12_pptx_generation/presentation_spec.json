@@ -1,0 +1,131 @@
+{
+  "presentation": {
+    "title": "Q4 2024 Business Review",
+    "subtitle": "Quarterly Performance Analysis",
+    "company": "TechCorp Industries",
+    "presenter": "Sarah Johnson, VP of Strategy",
+    "date": "January 2025"
+  },
+  "slides": [
+    {
+      "type": "title",
+      "title": "Q4 2024 Business Review",
+      "subtitle": "Driving Growth Through Innovation",
+      "presenter": "Sarah Johnson",
+      "date": "January 15, 2025"
+    },
+    {
+      "type": "agenda",
+      "title": "Today's Agenda",
+      "items": [
+        "Executive Summary",
+        "Revenue Performance",
+        "Regional Analysis",
+        "Product Portfolio",
+        "Customer Insights",
+        "Challenges & Opportunities",
+        "2025 Recommendations"
+      ]
+    },
+    {
+      "type": "summary",
+      "title": "Executive Summary",
+      "metrics": [
+        {"label": "Revenue", "value": "$14.4M", "change": "+15%"},
+        {"label": "Customers", "value": "2,450", "change": "+22%"},
+        {"label": "NPS", "value": "72", "change": "+8pts"},
+        {"label": "Markets", "value": "12", "change": "+3"}
+      ],
+      "highlights": [
+        "Exceeded revenue target by 3%",
+        "Successful launch of Product X",
+        "Expanded to 3 new markets"
+      ]
+    },
+    {
+      "type": "chart_bar",
+      "title": "Quarterly Revenue Trend",
+      "chart_title": "Revenue by Quarter ($ Millions)",
+      "data_source": "sales_data.csv",
+      "data_columns": ["Quarter", "Revenue"],
+      "insights": [
+        "Consistent quarter-over-quarter growth",
+        "Q4 strongest quarter historically"
+      ]
+    },
+    {
+      "type": "chart_pie",
+      "title": "Revenue by Region",
+      "chart_title": "Q4 2024 Regional Distribution",
+      "data_source": "sales_data.csv",
+      "data_columns": ["Region", "Revenue"],
+      "insights": [
+        "North America remains largest market",
+        "APAC fastest growing (+45% YoY)"
+      ]
+    },
+    {
+      "type": "table",
+      "title": "Product Performance",
+      "headers": ["Product", "Revenue", "Units", "Margin", "Growth"],
+      "rows": [
+        ["Product X", "$4.2M", "28,000", "45%", "+100%"],
+        ["Product Y", "$5.8M", "42,000", "38%", "+12%"],
+        ["Product Z", "$3.1M", "18,000", "52%", "+8%"],
+        ["Services", "$1.3M", "N/A", "65%", "+5%"]
+      ],
+      "highlight_row": 0,
+      "footer": "Product X launched in November 2024"
+    },
+    {
+      "type": "chart_line",
+      "title": "Customer Satisfaction Trend",
+      "chart_title": "Net Promoter Score (NPS)",
+      "data_source": "sales_data.csv",
+      "data_columns": ["Month", "NPS"],
+      "insights": [
+        "NPS improved steadily throughout year",
+        "December highest score at 75"
+      ]
+    },
+    {
+      "type": "two_column",
+      "title": "Challenges & Opportunities",
+      "left_title": "Challenges",
+      "left_items": [
+        "Supply chain constraints",
+        "Increased competition",
+        "Talent acquisition",
+        "Currency fluctuations"
+      ],
+      "right_title": "Opportunities",
+      "right_items": [
+        "APAC market expansion",
+        "Enterprise segment growth",
+        "New product pipeline",
+        "Strategic partnerships"
+      ]
+    },
+    {
+      "type": "numbered_list",
+      "title": "2025 Recommendations",
+      "items": [
+        {"text": "Accelerate APAC investment", "priority": "High"},
+        {"text": "Launch enterprise Product X tier", "priority": "High"},
+        {"text": "Diversify supply chain", "priority": "Medium"},
+        {"text": "Increase R&D budget 20%", "priority": "Medium"},
+        {"text": "Expand customer success team", "priority": "Low"}
+      ]
+    },
+    {
+      "type": "closing",
+      "title": "Thank You",
+      "subtitle": "Questions?",
+      "contact": {
+        "name": "Sarah Johnson",
+        "email": "sarah.johnson@techcorp.com",
+        "phone": "+1 (555) 123-4567"
+      }
+    }
+  ]
+}

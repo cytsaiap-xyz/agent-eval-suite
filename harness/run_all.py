@@ -24,6 +24,11 @@ PROBLEMS = {
         ("p8_data_transformation", "evaluate_p8.py", "."),
         ("p9_debug_loop", "evaluate_p9.py", None),
         ("p10_markdown_converter", "evaluate_p10.py", "converter.py"),
+        ("p11_docx_analysis", "evaluate_p11.py", "."),
+        ("p12_pptx_generation", "evaluate_p12.py", "."),
+        ("p13_xlsx_processing", "evaluate_p13.py", "."),
+        ("p14_pdf_extraction", "evaluate_p14.py", "."),
+        ("p15_multi_format", "evaluate_p15.py", "."),
     ]
 }
 

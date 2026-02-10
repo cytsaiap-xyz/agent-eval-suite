@@ -1,0 +1,32 @@
+Quarter,Revenue,Region,NPS,Month
+Q1 2024,11.2,North America,58,Jan
+Q1 2024,11.2,Europe,58,Feb
+Q1 2024,11.2,APAC,58,Mar
+Q2 2024,12.1,North America,62,Apr
+Q2 2024,12.1,Europe,62,May
+Q2 2024,12.1,APAC,62,Jun
+Q3 2024,13.5,North America,68,Jul
+Q3 2024,13.5,Europe,68,Aug
+Q3 2024,13.5,APAC,68,Sep
+Q4 2024,14.4,North America,72,Oct
+Q4 2024,14.4,Europe,72,Nov
+Q4 2024,14.4,APAC,75,Dec
+Q1 2024,11.2,,58,
+Q2 2024,12.1,,62,
+Q3 2024,13.5,,68,
+Q4 2024,14.4,,72,
+,7.2,North America,,
+,4.3,Europe,,
+,2.9,APAC,,
+Jan,,,,58
+Feb,,,,60
+Mar,,,,62
+Apr,,,,63
+May,,,,64
+Jun,,,,66
+Jul,,,,68
+Aug,,,,69
+Sep,,,,70
+Oct,,,,71
+Nov,,,,73
+Dec,,,,75

@@ -1,0 +1,55 @@
+{
+  "colors": {
+    "primary": "#1E3A5F",
+    "secondary": "#4A90A4",
+    "accent": "#E85D04",
+    "success": "#2E7D32",
+    "warning": "#F9A825",
+    "background": "#FFFFFF",
+    "text_dark": "#212121",
+    "text_light": "#757575"
+  },
+  "fonts": {
+    "title": {
+      "family": "Calibri",
+      "size": 44,
+      "bold": true
+    },
+    "subtitle": {
+      "family": "Calibri",
+      "size": 28,
+      "bold": false
+    },
+    "heading": {
+      "family": "Calibri",
+      "size": 32,
+      "bold": true
+    },
+    "body": {
+      "family": "Calibri",
+      "size": 18,
+      "bold": false
+    },
+    "caption": {
+      "family": "Calibri",
+      "size": 12,
+      "bold": false
+    }
+  },
+  "chart_colors": [
+    "#1E3A5F",
+    "#4A90A4",
+    "#E85D04",
+    "#7CB342",
+    "#5C6BC0",
+    "#26A69A"
+  ],
+  "layout": {
+    "margin_left": 0.5,
+    "margin_right": 0.5,
+    "margin_top": 0.5,
+    "margin_bottom": 0.5,
+    "logo_position": "bottom_right",
+    "slide_numbers": true
+  }
+}
