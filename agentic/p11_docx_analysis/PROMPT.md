@@ -1,6 +1,6 @@
 # Task: Analyze and Transform a Word Document
 
-You have a Word document `report_draft.docx` containing a company quarterly report. Analyze it and produce several outputs.
+You have a Word document `report_draft.docx` containing a company quarterly report. Use your document processing skills to analyze it and produce several outputs.
 
 ## Setup
 
@@ -9,6 +9,15 @@ First, generate the sample document:
 pip install python-docx
 python generate_document.py
 ```
+
+## Skills Available
+
+You have access to the `/docx` skill for Word document operations. Use it to:
+- Read and analyze .docx file structure
+- Extract text, headings, tables, and metadata
+- Understand document formatting and styles
+
+You may also need `/xlsx` skill for exporting tables to Excel.
 
 ## Your Task
 
@@ -66,7 +75,7 @@ Numbering should be hierarchical based on heading levels.
 
 ### 3. `extracted_tables.xlsx`
 
-Export all tables to Excel:
+Export all tables to Excel using the `/xlsx` skill:
 - One worksheet per table
 - Name sheets: "Table_1_DataSources", "Table_2_Financial", etc.
 - Include headers
@@ -97,24 +106,26 @@ Document quality issues found:
 - Missing elements (tables without headers, etc.)
 - Recommendations for fixes
 
+## Skill Usage Expectations
+
+This task tests your ability to:
+1. **Invoke the /docx skill** to understand Word document processing
+2. **Follow skill guidance** for reading document structure
+3. **Apply skill patterns** for text and table extraction
+4. **Combine skills** (/docx + /xlsx) for cross-format output
+
 ## Process
 
-1. Read the document using python-docx
-2. Iterate through paragraphs and identify structure
-3. Extract tables and their contents
-4. Analyze heading hierarchy for issues
+1. Use `/docx` skill to learn how to read .docx files
+2. Extract document structure (headings, paragraphs, tables)
+3. Analyze heading hierarchy for issues
+4. Use `/xlsx` skill to export tables to Excel
 5. Generate all output files
-
-## Requirements
-
-- Use `python-docx` for reading .docx
-- Use `openpyxl` for writing .xlsx
-- Use `json` for JSON output
-- Handle edge cases (empty cells, merged cells if any)
 
 ## Evaluation
 
 Your outputs will be checked for:
+- Proper skill invocation and usage
 - Accurate metadata extraction
 - Complete heading extraction
 - Correct table export

@@ -2,7 +2,15 @@
 
 ## Difficulty: Hard (Agentic)
 ## Expected Tool Calls: 10-20
-## Skills Required: docx reading/writing
+## Skills Required: /docx skill, /xlsx skill
+
+## Skill Usage
+
+This problem tests the agent's ability to:
+1. **Invoke the /docx skill** when working with Word documents
+2. **Follow skill guidance** for document structure extraction
+3. **Apply skill patterns** for reading and editing .docx files
+4. **Combine skills** (/docx + /xlsx) for cross-format output
 
 ## Task
 
@@ -110,7 +118,15 @@ Extract/generate a 1-page executive summary:
 
 ## Hints
 
-- Use python-docx library for reading/writing .docx
-- Document properties are in core_properties
-- Tables have rows and cells accessible via iteration
-- Styles can be accessed and modified via paragraph.style
+- **Invoke /docx skill first** to understand document processing patterns
+- The skill provides guidance on using pandoc, docx-js, and XML editing
+- Use skill-recommended approaches for table extraction
+- Follow skill patterns for document structure analysis
+
+## Skill Evaluation
+
+Points are awarded for:
+- Properly invoking /docx skill before starting
+- Following skill-documented approaches
+- Using /xlsx skill for Excel export
+- Applying skill patterns correctly

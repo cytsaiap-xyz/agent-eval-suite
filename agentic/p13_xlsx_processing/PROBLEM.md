@@ -2,7 +2,16 @@
 
 ## Difficulty: Hard (Agentic)
 ## Expected Tool Calls: 15-25
-## Skills Required: xlsx reading/writing, formulas, charts
+## Skills Required: /xlsx skill
+
+## Skill Usage
+
+This problem tests the agent's ability to:
+1. **Invoke the /xlsx skill** for Excel operations
+2. **Use formulas NOT hardcoded values** (critical skill requirement)
+3. **Apply financial modeling standards** from skill documentation
+4. **Create embedded Excel charts** using skill patterns
+5. **Perform formula verification** using skill's recalc script
 
 ## Task
 
@@ -91,8 +100,15 @@ Create `analysis_summary.json`:
 
 ## Hints
 
-- Use openpyxl for Excel operations
-- Formula strings start with '='
-- Charts need data ranges as references
-- Conditional formatting uses rules
-- Named ranges can simplify formulas
+- **Invoke /xlsx skill first** to understand Excel processing patterns
+- The skill emphasizes: **use formulas, NOT hardcoded values**
+- Follow skill's color coding standards (blue=inputs, black=formulas)
+- Use skill's recalc.py script after adding formulas
+
+## Skill Evaluation
+
+Points are awarded for:
+- Properly invoking /xlsx skill before starting
+- Using Excel formulas (not Python-calculated values)
+- Applying skill's financial modeling standards
+- Formula verification with no errors

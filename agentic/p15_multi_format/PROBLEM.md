@@ -2,7 +2,18 @@
 
 ## Difficulty: Very Hard (Agentic)
 ## Expected Tool Calls: 20-35
-## Skills Required: docx, pptx, xlsx, pdf - all combined
+## Skills Required: /docx, /pptx, /xlsx, /pdf - all four skills
+
+## Skill Usage
+
+This problem tests the agent's ability to:
+1. **Use all four document skills** appropriately
+2. **Switch between skills** as needed for each format
+3. **Apply skill-specific patterns** (formulas for xlsx, design for pptx, etc.)
+4. **Maintain consistency** across outputs created with different skills
+5. **Cross-validate data** extracted using different skills
+
+**Critical: This is the ultimate skill usage test - all four skills must be properly invoked.**
 
 ## Task
 
@@ -131,8 +142,18 @@ Create `report_archive.pdf`:
 
 ## Hints
 
-- Start by extracting all data into JSON
-- Compare figures across sources for validation
-- Use consistent formatting in outputs
-- Handle missing data gracefully
-- Document all assumptions
+- **Invoke each skill before working with that format:**
+  - /xlsx for Excel files
+  - /pptx for PowerPoint files
+  - /pdf for PDF files
+  - /docx for Word files
+- Follow each skill's specific patterns and requirements
+- Cross-validate data extracted using different skills
+
+## Skill Evaluation
+
+Points are awarded for:
+- All four skills properly invoked
+- Skill-specific patterns followed for each format
+- Consistent output quality across all formats
+- Evidence of skill guidance being applied

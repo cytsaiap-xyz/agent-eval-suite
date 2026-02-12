@@ -2,7 +2,16 @@
 
 ## Difficulty: Hard (Agentic)
 ## Expected Tool Calls: 12-25
-## Skills Required: pptx creation, data visualization
+## Skills Required: /pptx skill
+
+## Skill Usage
+
+This problem tests the agent's ability to:
+1. **Invoke the /pptx skill** for presentation creation
+2. **Apply design principles** from skill documentation
+3. **Use pptxgenjs patterns** as recommended by the skill
+4. **Perform QA verification** as specified in the skill
+5. **Follow professional design guidelines** from skill best practices
 
 ## Task
 
@@ -96,8 +105,15 @@ Create `quarterly_review.pptx` with:
 
 ## Hints
 
-- Use python-pptx library
-- Charts are created with chart_data objects
-- Shapes can contain text frames
-- Master slides control consistent formatting
-- Colors use RGBColor objects
+- **Invoke /pptx skill first** to understand presentation creation patterns
+- The skill provides design ideas, color palettes, and typography guidelines
+- Follow skill's QA process (convert to images, visual inspection)
+- Avoid common mistakes listed in the skill documentation
+
+## Skill Evaluation
+
+Points are awarded for:
+- Properly invoking /pptx skill before starting
+- Applying skill-documented design principles
+- Following QA verification process
+- Using skill-recommended color palettes

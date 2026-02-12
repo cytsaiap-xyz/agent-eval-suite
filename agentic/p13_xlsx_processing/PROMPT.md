@@ -1,6 +1,6 @@
 # Task: Process and Analyze an Excel Workbook
 
-Transform a multi-sheet Excel workbook by adding calculations, analysis, and a dashboard.
+Transform a multi-sheet Excel workbook by adding calculations, analysis, and a dashboard using the `/xlsx` skill.
 
 ## Setup
 
@@ -9,6 +9,16 @@ First, generate the sample workbook:
 pip install openpyxl
 python generate_workbook.py
 ```
+
+## Skills Available
+
+You have access to the `/xlsx` skill for Excel operations. Use it to:
+- Read and modify Excel workbooks
+- Add formulas (NOT hardcoded values)
+- Create charts and conditional formatting
+- Follow financial modeling best practices
+
+**Critical**: The skill emphasizes using Excel formulas instead of hardcoded values. Read this section carefully!
 
 ## Input File
 
@@ -38,7 +48,7 @@ Analyze data quality issues:
 
 ### 2. Add Calculated Columns to Sales Sheet
 
-Add these columns (with formulas, not hardcoded values):
+Add these columns **with formulas** (as specified in /xlsx skill):
 
 - **Revenue**: `=Quantity * Unit_Price * (1 - Discount_Pct/100)`
 - **Revenue_USD**: Revenue converted using Exchange_Rates (VLOOKUP)
@@ -55,12 +65,10 @@ Build these summary tables:
 | Region | Q1 | Q2 | Q3 | Q4 | Total |
 |--------|----|----|----|----|-------|
 | North America | ... | ... | ... | ... | ... |
-| ... | | | | | |
 
 **Top 10 Products by Revenue:**
 | Rank | Product | Revenue_USD |
 |------|---------|-------------|
-| 1 | ... | ... |
 
 **Monthly Trend:**
 | Month | Orders | Revenue_USD | Avg_Order |
@@ -87,12 +95,22 @@ A summary dashboard with:
 
 ### 5. Apply Conditional Formatting
 
+As documented in `/xlsx` skill:
 - **Target Achievement**: Green (>=100%), Yellow (80-99%), Red (<80%)
 - **Revenue columns**: Data bars
 - **Top 10%**: Bold green text
 - **Bottom 10%**: Red italic text
 
-### 6. Create analysis_summary.json
+### 6. Recalculate Formulas
+
+**Critical**: After adding formulas, use the recalculation script as specified in the `/xlsx` skill:
+```bash
+python scripts/recalc.py financial_data.xlsx
+```
+
+Check for formula errors (#REF!, #DIV/0!, etc.) and fix them.
+
+### 7. Create analysis_summary.json
 
 ```json
 {
@@ -129,46 +147,32 @@ A summary dashboard with:
 }
 ```
 
-## Technical Requirements
+## Skill Usage Expectations
 
-- Use `openpyxl` for Excel operations
-- Formulas should use cell references (not hardcoded values)
-- Charts must be embedded Excel charts
-- Preserve original data (add new sheets/columns, don't delete)
+This task tests your ability to:
+1. **Invoke the /xlsx skill** and understand its requirements
+2. **Use formulas NOT hardcoded values** (critical skill requirement)
+3. **Apply financial modeling standards** (color coding, number formats)
+4. **Create embedded Excel charts**
+5. **Use conditional formatting** patterns from the skill
+6. **Perform formula verification** using recalc script
 
-## Example Code Patterns
+## Key Skill Concepts to Apply
 
-```python
-from openpyxl import load_workbook
-from openpyxl.chart import BarChart, Reference
-from openpyxl.formatting.rule import ColorScaleRule, DataBarRule
-
-wb = load_workbook("financial_data.xlsx")
-ws = wb["Sales"]
-
-# Add formula
-ws["J2"] = "=F2*G2*(1-I2/100)"
-
-# Add VLOOKUP
-ws["K2"] = '=VLOOKUP(H2,Exchange_Rates!A:B,2,FALSE)*J2'
-
-# Add chart
-chart = BarChart()
-chart.add_data(Reference(ws, min_col=11, min_row=1, max_row=100))
-ws_dashboard.add_chart(chart, "A10")
-
-# Conditional formatting
-rule = DataBarRule(start_type='min', end_type='max', color="638EC6")
-ws.conditional_formatting.add("J2:J500", rule)
-
-wb.save("financial_data.xlsx")
-```
+From the `/xlsx` skill, pay attention to:
+- Formula construction rules
+- Color coding standards (blue for inputs, black for formulas)
+- Number formatting standards
+- Verification checklist
+- Common pitfalls (NaN handling, column mapping)
 
 ## Evaluation
 
 Your modified workbook will be checked for:
+- Proper /xlsx skill invocation
 - All new sheets present
-- Formulas calculate correctly
+- **Formulas used (not hardcoded values)**
+- Formulas calculate correctly (no errors)
 - Charts render with correct data
 - Conditional formatting applied
 - Summary JSON matches actual data

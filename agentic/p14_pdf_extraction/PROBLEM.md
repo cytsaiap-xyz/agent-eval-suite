@@ -2,7 +2,16 @@
 
 ## Difficulty: Hard (Agentic)
 ## Expected Tool Calls: 10-20
-## Skills Required: PDF reading, text extraction, structure analysis
+## Skills Required: /pdf skill
+
+## Skill Usage
+
+This problem tests the agent's ability to:
+1. **Invoke the /pdf skill** for PDF processing
+2. **Choose appropriate tools** (pypdf vs pdfplumber) based on skill guidance
+3. **Extract tables accurately** using skill-recommended approaches
+4. **Parse financial data** following skill patterns
+5. **Handle multi-page documents** systematically
 
 ## Task
 
@@ -124,8 +133,15 @@ Create `search_index.json` for full-text search:
 
 ## Hints
 
-- Use PyMuPDF (fitz) or pdfplumber for extraction
-- Tables can be detected by grid lines or whitespace patterns
-- Financial numbers often have specific formatting ($ , .)
-- Section headers usually have larger font size
-- Page headers/footers should be filtered out
+- **Invoke /pdf skill first** to understand extraction options
+- The skill provides a Quick Reference table for tool selection
+- Use pdfplumber for table extraction (`page.extract_tables()`)
+- Follow skill patterns for text extraction with layout preservation
+
+## Skill Evaluation
+
+Points are awarded for:
+- Properly invoking /pdf skill before starting
+- Using skill-recommended tools for each task
+- Following skill patterns for table extraction
+- Applying skill approaches for document structure analysis

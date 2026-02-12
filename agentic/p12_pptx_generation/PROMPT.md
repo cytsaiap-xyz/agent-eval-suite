@@ -1,12 +1,25 @@
 # Task: Generate a Professional PowerPoint Presentation
 
-Create a complete PowerPoint presentation from structured specifications and data.
+Create a complete PowerPoint presentation from structured specifications and data using the `/pptx` skill.
 
 ## Input Files
 
 1. `presentation_spec.json` - Defines slide structure and content
 2. `sales_data.csv` - Data for charts
 3. `brand_guidelines.json` - Colors, fonts, layout specs
+
+## Skills Available
+
+You have access to the `/pptx` skill for PowerPoint operations. Use it to:
+- Create new presentations from scratch
+- Add slides with various layouts
+- Insert charts, tables, and formatted text
+- Apply professional design principles
+
+Read the skill documentation carefully for:
+- Design best practices (color palettes, typography)
+- Chart creation patterns
+- QA and verification steps
 
 ## Your Task
 
@@ -81,46 +94,31 @@ All charts must:
 - Use brand colors for data series
 - Have readable data labels
 
-## Libraries
+## Skill Usage Expectations
 
-```bash
-pip install python-pptx
-```
+This task tests your ability to:
+1. **Invoke the /pptx skill** and follow its guidance
+2. **Apply design principles** from the skill documentation
+3. **Use pptxgenjs patterns** for slide creation
+4. **Perform QA verification** as specified in the skill
+5. **Create professional visuals** following skill best practices
 
-## Key python-pptx Patterns
+## Key Skill Concepts to Apply
 
-```python
-from pptx import Presentation
-from pptx.util import Inches, Pt
-from pptx.dml.color import RGBColor
-from pptx.chart.data import CategoryChartData
-from pptx.enum.chart import XL_CHART_TYPE
-
-# Create presentation
-prs = Presentation()
-
-# Add slide
-slide_layout = prs.slide_layouts[6]  # blank
-slide = prs.slides.add_slide(slide_layout)
-
-# Add shape with text
-shape = slide.shapes.add_shape(...)
-shape.text_frame.text = "Hello"
-
-# Add chart
-chart_data = CategoryChartData()
-chart_data.categories = ['Q1', 'Q2', 'Q3', 'Q4']
-chart_data.add_series('Revenue', [11.2, 12.1, 13.5, 14.4])
-chart = slide.shapes.add_chart(
-    XL_CHART_TYPE.COLUMN_CLUSTERED, x, y, cx, cy, chart_data
-).chart
-```
+From the `/pptx` skill, pay attention to:
+- Color palette selection (don't default to generic blue)
+- Typography guidelines (font sizes, hierarchy)
+- Layout options (two-column, icon grids, etc.)
+- QA requirements (convert to images, visual inspection)
+- Common mistakes to avoid
 
 ## Evaluation
 
 Your presentation will be checked for:
+- Proper /pptx skill invocation
 - All 10 slides present with correct content
 - Charts render with correct data
 - Brand colors properly applied
 - Font consistency
 - Professional appearance
+- Evidence of QA process

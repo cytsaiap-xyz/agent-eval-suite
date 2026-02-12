@@ -1,6 +1,6 @@
 # Task: Extract and Analyze a PDF Document
 
-Extract structured data from a multi-page PDF annual report.
+Extract structured data from a multi-page PDF annual report using the `/pdf` skill.
 
 ## Setup
 
@@ -9,6 +9,19 @@ First, generate the sample PDF:
 pip install reportlab
 python generate_pdf.py
 ```
+
+## Skills Available
+
+You have access to the `/pdf` skill for PDF operations. Use it to:
+- Extract text from PDF pages
+- Parse tables from PDF documents
+- Understand document structure
+- Handle different PDF content types
+
+The skill provides guidance on:
+- pypdf for basic operations
+- pdfplumber for text and table extraction
+- reportlab for creating PDFs
 
 ## Input File
 
@@ -23,7 +36,7 @@ python generate_pdf.py
 
 Extract and structure all content from the PDF.
 
-### 1. Extract Full Text → `extracted_text.md`
+### 1. Extract Full Text -> `extracted_text.md`
 
 Create a markdown file with:
 - All text content organized by page
@@ -45,7 +58,7 @@ Dear Shareholders,
 ...
 ```
 
-### 2. Extract Tables → `extracted_tables/`
+### 2. Extract Tables -> `extracted_tables/`
 
 Create one CSV file per table found:
 
@@ -78,7 +91,7 @@ Also create `table_metadata.json`:
 }
 ```
 
-### 3. Document Structure → `document_structure.json`
+### 3. Document Structure -> `document_structure.json`
 
 Map the document organization:
 ```json
@@ -107,7 +120,7 @@ Map the document organization:
 }
 ```
 
-### 4. Financial Summary → `financial_summary.json`
+### 4. Financial Summary -> `financial_summary.json`
 
 Extract key financial figures:
 ```json
@@ -146,7 +159,7 @@ Extract key financial figures:
 }
 ```
 
-### 5. Search Index → `search_index.json`
+### 5. Search Index -> `search_index.json`
 
 Create an index for text search:
 ```json
@@ -169,38 +182,36 @@ Create an index for text search:
 }
 ```
 
-## Libraries
+## Skill Usage Expectations
 
-```bash
-pip install PyMuPDF  # or pdfplumber, pypdf2
-```
+This task tests your ability to:
+1. **Invoke the /pdf skill** and understand PDF processing options
+2. **Choose appropriate tools** (pypdf vs pdfplumber) based on task
+3. **Extract tables accurately** using skill-recommended approaches
+4. **Parse financial data** from unstructured PDF content
+5. **Handle multi-page documents** systematically
 
-## Example Code
+## Key Skill Concepts to Apply
 
-```python
-import fitz  # PyMuPDF
+From the `/pdf` skill, pay attention to:
+- pdfplumber for table extraction (`page.extract_tables()`)
+- Text extraction with layout preservation
+- Quick reference table for tool selection
+- Advanced table extraction patterns
 
-# Open PDF
-doc = fitz.open("annual_report.pdf")
+## Process
 
-# Extract text from page
-for page_num in range(len(doc)):
-    page = doc[page_num]
-    text = page.get_text()
-    print(f"Page {page_num + 1}:")
-    print(text)
-
-# Find tables (basic approach)
-for page_num in range(len(doc)):
-    page = doc[page_num]
-    tables = page.find_tables()
-    for table in tables:
-        print(table.extract())
-```
+1. Use `/pdf` skill to learn extraction approaches
+2. Read the PDF and extract text page by page
+3. Identify and extract all tables
+4. Parse financial figures from table data
+5. Build document structure map
+6. Create search index from extracted text
 
 ## Evaluation
 
 Your outputs will be checked for:
+- Proper /pdf skill invocation
 - Complete text extraction
 - Accurate table parsing
 - Correct financial figures

@@ -1,6 +1,6 @@
 # Task: Multi-Format Document Integration
 
-Consolidate quarterly reports from four different document formats into unified outputs.
+Consolidate quarterly reports from four different document formats into unified outputs. This task requires using **all four document skills** together.
 
 ## Setup
 
@@ -9,6 +9,19 @@ Generate all input files:
 pip install openpyxl python-docx python-pptx reportlab PyMuPDF
 python generate_inputs.py
 ```
+
+## Skills Available
+
+You have access to **all document processing skills**:
+
+| Skill | Use For |
+|-------|---------|
+| `/xlsx` | Reading sales_report.xlsx, creating dashboard.xlsx |
+| `/pptx` | Reading marketing_deck.pptx, creating board_presentation.pptx |
+| `/pdf` | Reading finance_summary.pdf, creating report_archive.pdf |
+| `/docx` | Reading operations_update.docx, creating executive_summary.docx |
+
+**This task tests your ability to combine multiple skills effectively.**
 
 ## Input Files
 
@@ -35,13 +48,13 @@ You have reports from different departments in different formats:
 
 ## Your Task
 
-Extract, consolidate, and produce unified reports.
+Extract, consolidate, and produce unified reports using appropriate skills for each format.
 
 ### Step 1: Extract Data from Each Source
 
-Create `extracted/` directory with JSON for each source:
+Use the appropriate skill for each file format:
 
-**`extracted/sales_data.json`:**
+**Use `/xlsx` skill for `extracted/sales_data.json`:**
 ```json
 {
   "source": "sales_report.xlsx",
@@ -57,7 +70,7 @@ Create `extracted/` directory with JSON for each source:
 }
 ```
 
-**`extracted/marketing_data.json`:**
+**Use `/pptx` skill for `extracted/marketing_data.json`:**
 ```json
 {
   "source": "marketing_deck.pptx",
@@ -67,7 +80,7 @@ Create `extracted/` directory with JSON for each source:
 }
 ```
 
-**`extracted/finance_data.json`:**
+**Use `/pdf` skill for `extracted/finance_data.json`:**
 ```json
 {
   "source": "finance_summary.pdf",
@@ -76,7 +89,7 @@ Create `extracted/` directory with JSON for each source:
 }
 ```
 
-**`extracted/operations_data.json`:**
+**Use `/docx` skill for `extracted/operations_data.json`:**
 ```json
 {
   "source": "operations_update.docx",
@@ -137,7 +150,7 @@ Create `discrepancies.md`:
 [Data present in one source but missing from others]
 ```
 
-### Step 4: Create Executive Summary
+### Step 4: Create Executive Summary (Use /docx)
 
 Create `executive_summary.docx`:
 
@@ -148,7 +161,12 @@ A 2-page Word document with:
 - Top risks and opportunities
 - Recommendations
 
-### Step 5: Create Board Presentation
+Follow `/docx` skill guidance for:
+- Document structure
+- Table formatting
+- Professional styling
+
+### Step 5: Create Board Presentation (Use /pptx)
 
 Create `board_presentation.pptx`:
 
@@ -162,7 +180,13 @@ Create `board_presentation.pptx`:
 7. Key Risks & Opportunities
 8. Q1 2025 Outlook
 
-### Step 6: Create Dashboard
+Follow `/pptx` skill guidance for:
+- Design principles
+- Color palette selection
+- Chart creation
+- QA verification
+
+### Step 6: Create Dashboard (Use /xlsx)
 
 Create `dashboard.xlsx`:
 
@@ -172,7 +196,12 @@ Sheets:
 - **Charts**: Visualizations
 - **Validation**: Cross-source comparison
 
-### Step 7: Create Archive PDF
+Follow `/xlsx` skill guidance for:
+- Formula usage (not hardcoded values)
+- Conditional formatting
+- Chart creation
+
+### Step 7: Create Archive PDF (Use /pdf)
 
 Create `report_archive.pdf`:
 
@@ -182,38 +211,40 @@ Combined document with:
 - All key data and analysis
 - Source citations
 
+Follow `/pdf` skill guidance for:
+- PDF creation with reportlab
+- Multi-page document structure
+
+## Skill Usage Expectations
+
+This task tests your ability to:
+1. **Use all four skills** appropriately for each format
+2. **Switch between skills** as needed during the workflow
+3. **Apply skill-specific patterns** (formulas for xlsx, design for pptx, etc.)
+4. **Maintain consistency** across outputs created with different skills
+5. **Cross-validate data** extracted using different skills
+
 ## Process
 
-This is a multi-step task requiring iteration:
+This is a multi-step task requiring iteration and multiple skill invocations:
 
-1. Read each input file
-2. Extract structured data
-3. Compare and validate across sources
-4. Identify discrepancies
-5. Create consolidated outputs
-6. Generate final deliverables
-
-## Libraries Required
-
-```python
-# Reading
-from openpyxl import load_workbook
-from docx import Document
-from pptx import Presentation
-import fitz  # PyMuPDF
-
-# Writing
-from openpyxl import Workbook
-from docx import Document
-from pptx import Presentation
-from reportlab.platypus import SimpleDocTemplate
-```
+1. **Invoke /xlsx** -> Read Excel, extract sales data
+2. **Invoke /pptx** -> Read PowerPoint, extract marketing data
+3. **Invoke /pdf** -> Read PDF, extract finance data
+4. **Invoke /docx** -> Read Word, extract operations data
+5. Compare and validate across sources
+6. **Invoke /docx** -> Create executive summary
+7. **Invoke /pptx** -> Create board presentation
+8. **Invoke /xlsx** -> Create dashboard
+9. **Invoke /pdf** -> Create archive PDF
 
 ## Evaluation
 
 Your outputs will be checked for:
+- **All four skills properly invoked** (critical)
 - Complete data extraction from all sources
 - Accurate consolidation
 - Discrepancies correctly identified
 - Professional output documents
 - Data consistency across outputs
+- Evidence of skill-specific patterns used
